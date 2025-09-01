@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background: linear-gradient(to right, #eecdf4, #c7d9f1);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 700px;
+  padding: 20px;
+  position: relative;
+}
+
+/* 🔙 ปุ่มย้อนกลับ */
+.back-button {
+  background-color: #bffcf9;
+  border: none;
+  border-radius: 50%;
+  font-size: 22px;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  position: fixed;   /* คงที่มุมซ้ายบน */
+  top: 20px;
+  left: 20px;
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  z-index: 999;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.back-button:hover {
+  background-color: #9cf3ee;
+  transform: scale(1.1);
+}
+
+.contact-box {
+  background-color: #c2ccf7;
+  padding: 20px 60px;
+  border-radius: 20px;
+  margin: 80px auto 40px auto;
+  width: fit-content;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-box h1 {
+  margin: 0;
+  font-size: 36px;
+  color: #000;
+  text-shadow: 1px 1px #888;
+  text-align: center;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start;
+  margin-left: 20px;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.info-row img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.info-row span {
+  font-size: 20px;
+  color: #000;
+}
+
+/* ✅ Responsive */
+@media (max-width: 600px) {
+  .contact-box {
+    padding: 20px 30px;
+  }
+
+  .contact-box h1 {
+    font-size: 28px;
+  }
+
+  .info-row span {
+    font-size: 18px;
+  }
+
+  .info-row img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .back-button {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    top: 15px;
+    left: 15px;
+  }
+}

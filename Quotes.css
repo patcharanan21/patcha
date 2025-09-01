@@ -1,0 +1,150 @@
+body {
+  background: linear-gradient(90deg, #f0c9fc, #e7b8f3);
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+/* 🔙 ปุ่มย้อนกลับ */
+.back-button {
+  background-color: #d1f0ff;
+  border: none;
+  border-radius: 50%;
+  font-size: 28px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  position: fixed;   /* คงที่มุมซ้ายบน */
+  top: 20px;
+  left: 20px;
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  z-index: 999;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.back-button:hover {
+  background-color: #bce6f7;
+  transform: scale(1.1);
+}
+
+header h1 {
+  font-size: 3rem;
+  color: #f3a3d6;
+  margin-bottom: 40px;
+}
+
+.quote-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+
+.quote-image img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.quote-text {
+  text-align: left;
+}
+
+.english-quote {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.thai-quote {
+  font-size: 1.2rem;
+  color: #555;
+  font-style: italic;
+}
+
+.icons {
+  margin-top: 30px;
+}
+
+.icon {
+  width: 30px;
+  height: auto;
+  margin: 0 15px;
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  .quote-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .quote-image img {
+    width: 150px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .english-quote {
+    font-size: 1.4rem;
+  }
+
+  .thai-quote {
+    font-size: 1rem;
+  }
+
+  .icon {
+    width: 25px;
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .quote-section {
+    padding: 15px;
+  }
+
+  .quote-image img {
+    width: 120px;
+    margin-bottom: 15px;
+  }
+
+  .english-quote {
+    font-size: 1.2rem;
+  }
+
+  .thai-quote {
+    font-size: 0.9rem;
+  }
+
+  .icon {
+    width: 20px;
+    margin: 0 8px;
+  }
+}

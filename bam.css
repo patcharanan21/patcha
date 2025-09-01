@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(to right, #eacdf4, #ccd9f5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.minnie-link {
+  text-decoration: none;
+}
+
+/* กล่องรวมทั้งหมดของมินนี่ */
+.minnie {
+  position: relative;
+  width: 60vw;
+  max-width: 300px;
+  aspect-ratio: 1 / 1;
+  transition: transform 0.3s;
+}
+
+.minnie:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* หูซ้าย-ขวา */
+.ear {
+  width: 33%;
+  height: 33%;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.ear.left {
+  left: 0;
+}
+
+.ear.right {
+  right: 0;
+}
+
+/* หัวกลาง */
+.head {
+  width: 66%;
+  height: 66%;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 17%;
+  left: 17%;
+  z-index: 2;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* โบว์ */
+.bow {
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  width: 30%;
+  height: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+}
+
+/* ส่วนกลางโบว์ */
+.bow-center {
+  width: 100%;
+  height: 25px;
+  background: #b30000;
+  border-radius: 50%;
+  position: relative;
+  z-index: 5;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.bow-center::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(black 1.5px, transparent 1.5px);
+  background-size: 6px 6px;
+  border-radius: 50%;
+}
+
+/* ปีกซ้ายและขวาของโบว์ */
+.bow-left,
+.bow-right {
+  width: 100%;
+  height: 40px;
+  background: #b30000;
+  clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
+  position: relative;
+  z-index: 5;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.bow-left {
+  transform: rotate(-190deg);
+}
+
+.bow-right {
+  transform: rotate(2deg);
+}
+
+.bow-left::before,
+.bow-right::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(black 1.5px, transparent 1.5px);
+  background-size: 6px 6px;
+}
+
+/* ✅ Responsive adjustments */
+@media (max-width:1000px) {
+  .minnie {
+    width: 80vw;
+  }
+
+  .bow-center {
+    height: 30px;
+  }
+
+  .bow-left,
+  .bow-right {
+    height: 40px;
+  }
+}

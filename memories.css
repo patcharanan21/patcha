@@ -1,0 +1,122 @@
+body {
+  background: linear-gradient(90deg, #f0c9fc, #e7b8f3);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+/* 🔙 ปุ่มย้อนกลับ */
+.back-button {
+  background-color: #d1f0ff;
+  border: none;
+  border-radius: 50%;
+  font-size: 28px; /* ขนาดลูกศร */
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  position: fixed;   /* อยู่คงที่มุมซ้ายบน */
+  top: 20px;
+  left: 20px;
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: #070c07;
+  margin-top: 80px;
+}
+
+.memories-border {
+  padding: 20px;
+  border: px solid #3fdf44;
+  background-color: rgba(130, 235, 156, 0.63);
+  display: inline-block;
+  border-radius: 15px;
+  margin-top: 50px;
+}
+
+.photo-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.photo-card {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  padding: 10px;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.photo-card::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: red;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  .photo-card {
+    width: 150px;
+    height: 150px;
+  }
+
+  .photo-card::after {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .photo-gallery {
+    justify-content: space-evenly;
+  }
+
+  .photo-card {
+    width: 130px;
+    height: 130px;
+  }
+
+  .photo-card::after {
+    width: 18px;
+    height: 18px;
+  }
+}

@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(to right, #eacdf4, #ccd9f5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Verdana', sans-serif;
+}
+
+/* กล่องเมนูทั้งหมด */
+.menu {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 40px 60px;
+    text-align: center;
+}
+
+/* ปุ่มแต่ละอัน */
+.btn {
+    padding: 20px 40px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* สีปุ่ม */
+.pink {
+    background-color: #f7b6d2;
+}
+
+.purple {
+    background-color: #dda4f0;
+}
+
+.blue {
+    background-color: #b9c9fc;
+}
+
+.green {
+    background-color: #c8eccb;
+}
+
+.yellow {
+    background-color: #f9f3b3;
+}
+/* ========== เพิ่มเข้าไปที่ท้ายไฟล์ CSS เดิมของคุณ ========== */
+
+/* สำหรับหน้าจอขนาดกลาง เช่น แท็บเล็ต */
+@media (max-width: 900px) {
+    .menu {
+      grid-template-columns: repeat(2, auto);
+      gap: 30px 40px;
+    }
+  
+    .btn {
+      padding: 16px 32px;
+      font-size: 16px;
+    }
+  }
+  
+  /* สำหรับหน้าจอขนาดเล็ก เช่น มือถือ */
+  @media (max-width: 600px) {
+    .menu {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  
+    .btn {
+      width: 80vw;
+      padding: 14px 20px;
+      font-size: 16px;
+      margin: 0 auto;
+    }
+  }
+  

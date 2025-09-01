@@ -1,0 +1,154 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #f0d3f7, #d5d9f8);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 30px;
+    position: relative;
+}
+
+/* 🔙 ปุ่มย้อนกลับ */
+.back-button {
+    background-color: #d1f0ff;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    position: fixed;   /* คงที่มุมซ้ายบน */
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.back-button:hover {
+    background-color: #bce6f7;
+    transform: scale(1.1);
+}
+
+.profile-card {
+    display: flex;
+    align-items: flex-start;
+    background-color: #f0d3f7;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 30px;
+    max-width: 900px;
+    margin: 100px auto;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.profile-img {
+    width: 250px;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+.profile-right {
+    flex: 1;
+    color: #000;
+    font-size: 18px;
+    min-width: 250px;
+}
+
+.profile-title {
+    font-size: 36px;
+    font-weight: bold;
+    background-color: #d9aef2;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.witch-duck {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 200px;
+    height: auto;
+    z-index: 2;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 780px) {
+    .profile-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .profile-img {
+        width: 200px;
+        margin-bottom: 20px;
+    }
+
+    .profile-title {
+        font-size: 28px;
+    }
+
+    .profile-right {
+        font-size: 16px;
+    }
+
+    .back-button {
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+        top: 10px;
+        left: 10px;
+    }
+
+    .witch-duck {
+        top: -15px;
+        right: -15px;
+        width: 150px;
+    }
+}
+
+/* ✅ Small screens (under 480px) */
+@media (max-width: 480px) {
+    .profile-card {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .profile-img {
+        width: 150px;
+    }
+
+    .profile-title {
+        font-size: 24px;
+    }
+
+    .profile-right {
+        font-size: 14px;
+    }
+
+    .witch-duck {
+        width: 120px;
+        top: -10px;
+        right: -10px;
+    }
+
+    .back-button {
+        font-size: 18px;
+        width: 35px;
+        height: 35px;
+    }
+}
